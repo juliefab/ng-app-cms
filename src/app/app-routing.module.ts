@@ -6,6 +6,7 @@ import { UserCreateComponent }   from './user-create/user-create.component';
 // 2. Import the UserComponent
 import { UsersComponent }   from './users/users.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { PostComponent } from './posts/posts.component';
 // 3. Declare your routes
 const routes: Routes = [
   // 4. The default route
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'users', component: UsersComponent },
   { path: 'users/view/:id', component: UserViewComponent },
    { path: 'users/create', component: UserCreateComponent },
-  { path: 'users/edit/:id', component: UserEditComponent }
+  { path: 'users/edit/:id', component: UserEditComponent },
+  { path: 'posts', component: PostsComponent }
 ];
 
 @NgModule({

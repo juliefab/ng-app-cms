@@ -33,4 +33,7 @@ export class UserService {
   editUser (user: User): Observable<User> {
   return this.http.post<User>(this.url + '/edit',user, httpOptions);
   }
+  deleteUser (id: string): Observable<User> {
+  return this.http.get<User>(this.url + `/delete/${id}`);
+  }
 }

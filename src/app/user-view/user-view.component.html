@@ -3,5 +3,5 @@
   <div><strong>Username:</strong> {{user.username}}</div>
   <div><strong>Email:</strong> {{user.email}}</div>
   <button [routerLink]="['/users/edit/', user._id]">Edit</button>
-  <button>Delete</button>
+  <button (click)="deleteUser(user._id)">Delete</button>
 </div>

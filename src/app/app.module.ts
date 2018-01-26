@@ -11,13 +11,15 @@ import { UserViewComponent } from './user-view/user-view.component';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { FormsModule }   from '@angular/forms';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { PostsComponent } from './posts/posts.component';
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     UserViewComponent,
     UserCreateComponent,
-    UserEditComponent
+    UserEditComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
