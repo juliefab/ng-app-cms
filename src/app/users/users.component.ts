@@ -6,10 +6,6 @@ import { UserService } from '../user.service';
 // 2. Import the User Object/Schema
 import { User } from '../user';
 
-// 3. Create a JSON header
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
 
 @Component({
   selector: 'app-users',
