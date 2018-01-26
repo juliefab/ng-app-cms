@@ -5,6 +5,10 @@ import { Observable } from 'rxjs/Observable';
 
 import { User } from './user';
 
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
 @Injectable()
 export class UserService {
 
@@ -18,8 +22,12 @@ export class UserService {
   getUsers(): Observable<User> {
     return this.http.get<User>(this.url);
   }
-  
+
   getUser(id: string): Observable<User> {
     return this.http.get<User>(this.url + `/view/${id}`);
+  }
+
+  createUser (user: User): Observable<User> {
+  return this.http.post<User>(this.url + '/create',user, httpOptions);
   }
 }
