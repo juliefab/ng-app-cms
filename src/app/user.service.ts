@@ -18,5 +18,8 @@ export class UserService {
   getUsers(): Observable<User> {
     return this.http.get<User>(this.url);
   }
-
+  
+  getUser(id: string): Observable<User> {
+    return this.http.get<User>(this.url + `/view/${id}`);
+  }
 }
