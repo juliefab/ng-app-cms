@@ -13,7 +13,8 @@ const routes: Routes = [
   // 5. Map /users to the UsersComponent
   { path: 'users', component: UsersComponent },
   { path: 'users/view/:id', component: UserViewComponent },
-{ path: 'users/create', component: UserCreateComponent }
+   { path: 'users/create', component: UserCreateComponent },
+  { path: 'users/edit/:id', component: UserEditComponent }
 ];
 
 @NgModule({
