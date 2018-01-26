@@ -9,7 +9,7 @@ import { UserService } from './user.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { UserViewComponent } from './user-view/user-view.component';
 import { UserCreateComponent } from './user-create/user-create.component';
-
+import { FormsModule }   from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { UserCreateComponent } from './user-create/user-create.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+     FormsModule
   ],
   providers: [
     UserService
