@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserCreateComponent }   from './user-create/user-create.component';
 // 2. Import the UserComponent
 import { UsersComponent }   from './users/users.component';
-
+import { UserEditComponent } from './user-edit/user-edit.component';
 // 3. Declare your routes
 const routes: Routes = [
   // 4. The default route
