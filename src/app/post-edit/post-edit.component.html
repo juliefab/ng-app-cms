@@ -1,0 +1,31 @@
+<div class="container-fluid">
+<h1 *ngIf="post">Edit {{post.title}} </h1>
+
+<form *ngIf="post" (ngSubmit)="onSubmit()" #editPost="ngForm">
+  <div *ngIf="errorMessage" class="alert error form-group ">{{errorMessage}}</div>
+
+  <input [(ngModel)]="post._id" type="hidden" id="_id" [ngModelOptions]="{standalone: true}">
+
+  <div class="form-group">
+    <label for="title">Post Title</label>
+    <input [(ngModel)]="post.title" class="form-control" type="text" id="title" [ngModelOptions]="{standalone: true}">
+    <div class="error" *ngIf="errors.title">{{errors.title.message}}</div>
+  </div>
+
+  <div class="form-group">
+    <label for="slug">slug</label>
+    <input [(ngModel)]="post.slug"  class="form-control" type="text" id="slug" [ngModelOptions]="{standalone: true}">
+    <div class="error" *ngIf="errors.slug">{{errors.slug.message}}</div>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Body</label>
+    <textarea [(ngModel)]="post.description" class="form-control body-text" type="text" name="description" id="description" [ngModelOptions]="{standalone: true}"></textarea>
+    <div class="error" *ngIf="errors.description">{{errors.description.message}}</div>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+</div>

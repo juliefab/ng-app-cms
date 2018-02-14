@@ -13,7 +13,8 @@ const httpOptions = {
 export class UserService {
 
   //Set up the URL
-  private url: string = 'http://localhost:3000/api/users';
+  // private url: string = 'https://j-finch.com/api/users';
+    private url: string = 'http://localhost:3000/api/users';
 
   //Call the HttpClient in the Constructor
   constructor(private http: HttpClient) { }

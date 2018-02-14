@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <h1 *ngIf="user">Edit {{user.first_name}} {{user.last_name}}</h1>
 
 <form *ngIf="user" (ngSubmit)="onSubmit()" #editUser="ngForm">
@@ -5,29 +6,30 @@
 
   <input [(ngModel)]="user._id" type="hidden" id="_id" [ngModelOptions]="{standalone: true}">
 
-  <div>
+  <div class="form-group">
     <label for="username">Username</label>
-    <input [(ngModel)]="user.username" type="text" id="username" [ngModelOptions]="{standalone: true}">
+    <input [(ngModel)]="user.username" class="form-control" type="text" id="username" [ngModelOptions]="{standalone: true}">
     <div class="error" *ngIf="errors.username">{{errors.username.message}}</div>
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="email">Email</label>
-    <input [(ngModel)]="user.email" type="text" id="email" [ngModelOptions]="{standalone: true}">
+    <input [(ngModel)]="user.email" class="form-control" type="text" id="email" [ngModelOptions]="{standalone: true}">
     <div class="error" *ngIf="errors.email">{{errors.email.message}}</div>
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="first_name">First Name</label>
-    <input [(ngModel)]="user.first_name" type="text" name="first_name" id="first_name" [ngModelOptions]="{standalone: true}">
+    <input [(ngModel)]="user.first_name"  class="form-control" type="text" name="first_name" id="first_name" [ngModelOptions]="{standalone: true}">
     <div class="error" *ngIf="errors.first_name">{{errors.first_name.message}}</div>
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="last_name">Last Name</label>
-    <input [(ngModel)]="user.last_name" type="text" id="last_name" [ngModelOptions]="{standalone: true}">
+    <input [(ngModel)]="user.last_name" class="form-control" type="text" id="last_name" [ngModelOptions]="{standalone: true}">
     <div class="error" *ngIf="errors.last_name">{{errors.last_name.message}}</div>
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
+</div>

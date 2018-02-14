@@ -1,7 +1,15 @@
-<div *ngIf="user">
+
+<div *ngIf="user" class="container-fluid">
   <h1>{{user.first_name}} {{user.last_name}}</h1>
-  <div><strong>Username:</strong> {{user.username}}</div>
-  <div><strong>Email:</strong> {{user.email}}</div>
-  <button [routerLink]="['/users/edit/', user._id]">Edit</button>
-  <button (click)="deleteUser(user._id)">Delete</button>
+  <ul class="list-group">
+
+   <li class="list-group-item"><strong>Username:</strong> {{user.username}}</li>
+   <li class="list-group-item"><strong>Email:</strong> {{user.email}}</li>
+
+ </ul>
+
+<div>
+  <a class="btn btn-primary" [routerLink]="['/users/edit/', user._id]">Edit</a>
+  <a class="btn btn-danger delete-button" (click)="deleteUser(user._id)">Delete</a>
+</div>
 </div>

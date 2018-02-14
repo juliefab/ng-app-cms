@@ -12,6 +12,10 @@ import { UserCreateComponent } from './user-create/user-create.component';
 import { FormsModule }   from '@angular/forms';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostService } from './post.service';
+import { PostCreateComponent } from './post-create/post-create.component';
+import { PostEditComponent } from './post-edit/post-edit.component';
+import { PostViewComponent } from './post-view/post-view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +23,10 @@ import { PostsComponent } from './posts/posts.component';
     UserViewComponent,
     UserCreateComponent,
     UserEditComponent,
-    PostsComponent
+    PostsComponent,
+    PostCreateComponent,
+    PostEditComponent,
+    PostViewComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,8 @@ import { PostsComponent } from './posts/posts.component';
      FormsModule
   ],
   providers: [
-    UserService
+    UserService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })

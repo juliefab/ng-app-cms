@@ -1,8 +1,11 @@
-<h1>Users</h1>
-<ul *ngIf="users">
-  <li *ngFor="let user of users">
-    
-    <a [routerLink]="['/users/view/', user._id]">{{user.username}}</a>
+<div class="container-fluid">
+  <h1>Users</h1>
 
-  </li>
-</ul>
+<div *ngIf="users" class="list-group">
+
+
+    <button *ngFor="let user of users" class="list-group-item list-group-item-action"[routerLink]="['/users/view/', user._id]">{{user.username}}</button>
+
+
+</div>
+</div>

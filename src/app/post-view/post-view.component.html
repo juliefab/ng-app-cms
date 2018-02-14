@@ -1,0 +1,17 @@
+<div *ngIf="post" class="container-fluid">
+  <h1> {{post.post.title}} </h1>
+  <ul class="list-group">
+  <li class="list-group-item"><strong>Post Title:</strong> {{post.post.title}}</li>
+  <!-- <div><strong>Slug:</strong> {{post.slug}}</div>
+  <div><strong>Description:</strong> {{post.description}}</div> -->
+  <li class="list-group-item">{{post.post.published | date:medium}}</li>
+
+  <li class="list-group-item">{{ post.post.description }}</li>
+</ul>
+
+<div>
+  <a class="btn btn-primary" [routerLink]="['/posts/edit/', post.post.slug]">Edit</a>
+  <a class="btn btn-danger delete-button" (click)="deletePost(post.post._id)">Delete</a>
+</div>
+
+</div>

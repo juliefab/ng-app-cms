@@ -1,3 +1,12 @@
-<p>
-  posts works!
-</p>
+<div class="container-fluid">
+  <h1>Posts</h1>
+<div  *ngIf="posts" class="list-group">
+
+
+<!-- {{post.title}} -->
+    <button *ngFor="let post of posts" type="button" class="list-group-item list-group-item-action" [routerLink]="['/posts/view/', post.slug]">{{post.title}}</button>
+
+
+
+</div>
+</div>

@@ -1,10 +1,8 @@
 export class Post {
-  user: any;
-  users: any;
-  errors: any;
-  success: boolean;
-  username: any;
+  _id: any;
+  post:any;
+  posts:any;
   title: any;
-  body:any;
-  published:any;  
+  slug: any;
+  description:any;
 }
